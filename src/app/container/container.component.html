@@ -1,6 +1,12 @@
-<div >
-<ul *ngFor="let item of this.keys[0][1],index as i">
-    <app-card [name]="item.name" [description]="item.description" 
-              [image]="item.image" [likes]="item.likes" [dislikes]="item.dislikes"></app-card>
-</ul>
+
+<div *ngFor="let item of this.keys[0][1]; index as i" >
+  <app-card
+    [name]="item.name"
+    [description]="item.description"
+    [image]="item.image"
+    [likes]="item.likes"
+    [dislikes]="item.dislikes"
+    *ngIf="i > 0"
+  ></app-card>
+  <br>
 </div>
