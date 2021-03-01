@@ -1,12 +1,7 @@
-
-<div *ngFor="let item of this.keys[0][1]; index as i" >
-  <app-card
-    [name]="item.name"
-    [description]="item.description"
-    [image]="item.image"
-    [likes]="item.likes"
-    [dislikes]="item.dislikes"
-    *ngIf="i > 0"
-  ></app-card>
-  <br>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 margin" *ngFor="let item of this.keys[0][1]; index as i">
+    <app-card  [name]="item.name" [description]="item.description" [image]="item.image"
+      [likes]="item.likes" [dislikes]="item.dislikes" >
+    </app-card>
+  </div>
 </div>
