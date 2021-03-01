@@ -25,10 +25,20 @@ export class BannerComponent implements OnInit {
   liked():void {
     console.log(this.principal.likes);
     this.principal.likes = this.principal.likes +1;
+    localStorage.setItem("likes",this.principal.likes);
   }
   disliked():void {
     console.log(this.principal.dislikes);
     this.principal.dislikes = this.principal.dislikes +1;
+    localStorage.setItem("dislikes",this.principal.dislikes);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(localStorage.getItem("likes")){
+      
+      this.principal.likes = Number(localStorage.getItem("likes"));
+    }
+    if(localStorage.getItem("dislikes")){
+      this.principal.dislikes = Number(localStorage.getItem("dislikes"));
+    }
+  }
 }
