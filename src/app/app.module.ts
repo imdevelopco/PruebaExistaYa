@@ -8,6 +8,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ContainerComponent } from './container/container.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,11 @@ import { ContainerComponent } from './container/container.component';
     BrowserModule,
     NoopAnimationsModule,
     MatCardModule,
-    MatButtonModule
-    
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatGridListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
