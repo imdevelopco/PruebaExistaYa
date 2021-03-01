@@ -1,7 +1,7 @@
 :mega: :mega: :mega:
 #  Prueba Para el Cargo: Desarrollador Web
 
-:bulb: Hecho con Angular
+:bulb: Hecho con Angular, Angular Material y Bootstrap
 
 :computer: URL : https://github.com/imdevelopco/prueba-exista-ya
 
