@@ -1,1 +1,64 @@
-<p>banner works!</p>
+  <nav class="navbar navbar-expand-lg navbar-light  bg-transparent text-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand titulo" href="#">DBZ Heroes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto pull-lg-right">
+          <li class="nav-item">
+            <a class="nav-link letra" href="#">Héroes anteriores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letra" href="#">¿Cómo funciona?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letra" href="#" tabindex="-1">Iniciar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <mat-toolbar color="none" class="bg">  
+    <mat-toolbar-row>
+      
+    </mat-toolbar-row>
+  <mat-toolbar-row class="row-card">
+    <mat-card class="card-principal">
+      
+      <mat-card-header>  
+        <mat-card-title>
+          <h1>{{principal.name}}</h1>
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>{{principal.description}}</p>
+        
+      </mat-card-content>
+      <a target="_blank" href="https://es.wikipedia.org/wiki/Son_Gok%C5%AB">Mas información</a>
+      <mat-card-actions>
+        <br />
+        <h6>¿Cual es tu voto?</h6>
+        <div class="votos">
+          <button mat-button (click)="liked()">
+            <mat-icon aria-hidden="false" aria-label="like icon"
+              >thumb_up_alt</mat-icon
+            >
+            <p>{{principal.likes}}</p>
+          </button>
+
+          <button mat-button (click)="disliked()">
+            <mat-icon aria-hidden="false" aria-label="dislike icon"
+              >thumb_down_alt</mat-icon
+            >
+            <p>{{principal.dislikes}}</p>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="calificacion">
+    <mat-progress-bar mode="determinate" value="{{ (principal.likes*100/(principal.likes + principal.dislikes))  }}"></mat-progress-bar>
+  </mat-toolbar-row>
+</mat-toolbar>
