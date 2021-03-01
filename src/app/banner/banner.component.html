@@ -1,48 +1,64 @@
-<style>
-  .bg {
-    display: flex;
-    width: 100%;
-    height: auto;
-    background: url("https://www.latercera.com/resizer/Am6Tr2ws8JnL4CHLfU_Humpr56Q=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XMJRWZH5N5CBXPL67NAKBGXFNI.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-image-width: 10%;
-    background-color: yellow;
-
-    
-    }
-
-    span{
-        padding-left: 5%;
-    }
-
-    .opciones{
-        background-color: aquamarine;
-        align-items: flex-end;
-        justify-items: center;
-        align-self:center;
-
-    }
-
-</style>
-
-<mat-toolbar color="none" class="bg" >
-  <mat-toolbar-row>
-    <h1>Heroes DBZ</h1>
-    
-    <div class="opciones">
-      <span>¿Como Funciona?</span>
-
-      <span>Heroes Anteriores</span>
-
-      <span>Iniciar Sesion</span>
-
-      <mat-icon aria-hidden="false" aria-label="search icon">search</mat-icon>
+  <nav class="navbar navbar-expand-lg navbar-light  bg-transparent text-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand titulo" href="#">DBZ Heroes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto pull-lg-right">
+          <li class="nav-item">
+            <a class="nav-link letra" href="#">Héroes anteriores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letra" href="#">¿Cómo funciona?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letra" href="#" tabindex="-1">Iniciar sesión</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-  </mat-toolbar-row>
-  
+  </nav>
+  <mat-toolbar color="none" class="bg">  
+    <mat-toolbar-row>
+      
+    </mat-toolbar-row>
+  <mat-toolbar-row class="row-card">
+    <mat-card class="card-principal">
+      
+      <mat-card-header>  
+        <mat-card-title>
+          <h1>{{principal.name}}</h1>
+        </mat-card-title>
+      </mat-card-header>
 
-  
+      <mat-card-content>
+        <p>{{principal.description}}</p>
+        
+      </mat-card-content>
+      <a target="_blank" href="https://es.wikipedia.org/wiki/Son_Gok%C5%AB">Mas información</a>
+      <mat-card-actions>
+        <br />
+        <h6>¿Cual es tu voto?</h6>
+        <div class="votos">
+          <button mat-button (click)="liked()">
+            <mat-icon aria-hidden="false" aria-label="like icon"
+              >thumb_up_alt</mat-icon
+            >
+            <p>{{principal.likes}}</p>
+          </button>
+
+          <button mat-button (click)="disliked()">
+            <mat-icon aria-hidden="false" aria-label="dislike icon"
+              >thumb_down_alt</mat-icon
+            >
+            <p>{{principal.dislikes}}</p>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="calificacion">
+    <mat-progress-bar mode="determinate" value="{{ (principal.likes*100/(principal.likes + principal.dislikes))  }}"></mat-progress-bar>
+  </mat-toolbar-row>
 </mat-toolbar>
