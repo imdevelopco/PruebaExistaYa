@@ -10,7 +10,7 @@
         "name":"Vegeta",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
         "image":"https://depor.com/resizer/M0Wu9oK1w7cAtFDZU8RJmcQbPZA=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/4HFH2SWZ35E3BE6VXIRA6X2EZA.jpg",
-        "likes": 4,
+        "likes": 45,
         "dislikes":6
     },
  {
@@ -18,20 +18,20 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
         "image":"https://bandai.com.mx/blog/wp-content/uploads/2019/02/trunks-1.jpg",
         "likes": 4,
-        "dislikes":6
+        "dislikes":66
     },
  {
         "name":"Gotenks",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
         "image":"https://areajugones.sport.es/wp-content/uploads/2020/03/fa2396d90544e8d6984f3aa81587711baa314a58_hq.jpg",
-        "likes": 4,
+        "likes": 40,
         "dislikes":6
     },
  {
         "name":"Broly",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
         "image":"https://elcomercio.pe/resizer/OkBWsAUq-mGkKsQGimTNtGNFJLw=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/DETQHL5EINCPXEOJRT4MWUDGPM.jpg",
-        "likes": 4,
-        "dislikes":6
+        "likes": 15,
+        "dislikes":4
     }
 ]
