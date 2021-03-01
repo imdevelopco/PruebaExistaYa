@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as data from '../info.json';
-import { CardComponent} from '../card/card.component'
+
 
 @Component({
   selector: 'app-container',
